@@ -30,3 +30,6 @@ jsonark('metadata.json', {
 **xmhscratch**
 
 + http://github.com/xmhscratch
+
+## License
+Licensed under the GPL license.
