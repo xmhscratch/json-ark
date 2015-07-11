@@ -1,0 +1,25 @@
+{
+  "name": "jsonark",
+  "version": "1.0.0",
+  "description": "extend and update json into a file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/xmhscratch/jsonark.git"
+  },
+  "keywords": [
+    "json"
+  ],
+  "author": "xmhscratch",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/xmhscratch/jsonark/issues"
+  },
+  "homepage": "https://github.com/xmhscratch/jsonark#readme",
+  "dependencies": {
+    "underscore": "^1.8.3"
+  }
+}
