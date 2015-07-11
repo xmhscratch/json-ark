@@ -24,3 +24,9 @@ jsonaky('metadata.json', {
   console.log('json saved: ', data);
 });
 ```
+
+## Authors
+
+**xmhscratch**
+
++ http://github.com/xmhscratch
