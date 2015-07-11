@@ -1,10 +1,10 @@
-# jsonaky - update and extend json file
+# jsonark - update and extend json file
 
 ## Installation
-` $ npm install jsonaky`
+` $ npm install jsonark`
 
 ## API
-**jsonaky(filepath, data[, options], callback)**
+**jsonark(filepath, data[, options], callback)**
 + filepath String
 + data String | Buffer
 + options Object
@@ -13,9 +13,9 @@
   +	space: Number | Null default = null
 + callback Function
 ```js
-var jsonaky = require('jsonaky');
+var jsonark = require('jsonark');
 
-jsonaky('metadata.json', {
+jsonark('metadata.json', {
   compile_css: {
     run: false,
     time: 1405213450
