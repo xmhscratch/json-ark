@@ -4,24 +4,25 @@
 ` $ npm install jsonscore`
 
 ## API
-**jsonscore(filepath, data[, options], callback)**
+**jsonscore(filepath, [, options])**
 + filepath String
-+ data String | Buffer
 + options Object
   + encoding String | Null default = 'utf8'
   + replacer Function | Null default = null
   +	space: Number | Null default = null
-+ callback Function
 ```js
 var jsonscore = require('jsonscore');
 
 jsonscore('metadata.json', {
+	space: 4
+}).extend({
   compile_css: {
     run: false,
     time: 1405213450
   }
-}, function(err, data) {
-  console.log('json saved: ', data);
+}).write(function(error, data) {
+  if(error) console.log(error);
+  else console.log('json saved: ', data);
 });
 ```
 
