@@ -1,5 +1,5 @@
 {
-  "name": "jsonark",
+  "name": "jsonscore",
   "version": "0.0.1",
   "description": "extend and update json into a file",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/xmhscratch/jsonark.git"
+    "url": "git+ssh://git@github.com/xmhscratch/jsonscore.git"
   },
   "keywords": [
     "json"
@@ -16,9 +16,9 @@
   "author": "xmhscratch",
   "license": "GPL-2.0",
   "bugs": {
-    "url": "https://github.com/xmhscratch/jsonark/issues"
+    "url": "https://github.com/xmhscratch/jsonscore/issues"
   },
-  "homepage": "https://github.com/xmhscratch/jsonark#readme",
+  "homepage": "https://github.com/xmhscratch/jsonscore#readme",
   "dependencies": {
     "underscore": "^1.8.3"
   }

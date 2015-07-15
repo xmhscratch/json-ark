@@ -24,22 +24,3 @@ module.exports = function(filePath, data, options, done) {
 		});
 	});
 }
-
-module.exports.sync = function(filePath, data, options) {
-	options = (options || {});
-	_.defaults(options, {
-		encoding: 'utf-8',
-		replacer: null,
-		space: null
-	});
-
-	filePath = path.normalize(filePath);
-	var content = fs.readFileSync(filePath, { encoding: options.encoding }) || {};
-	data = _.extend({}, data, JSON.parse(content));
-
-    fs.writeFileSync(filePath, JSON.stringify(
-    	data, options.replacer, options.space
-	));
-
-	return data;
-}

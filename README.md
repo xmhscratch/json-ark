@@ -1,10 +1,10 @@
-# jsonark - update and extend json file
+# jsonscore - update and extend json file
 
 ## Installation
-` $ npm install jsonark`
+` $ npm install jsonscore`
 
 ## API
-**jsonark(filepath, data[, options], callback)**
+**jsonscore(filepath, data[, options], callback)**
 + filepath String
 + data String | Buffer
 + options Object
@@ -13,9 +13,9 @@
   +	space: Number | Null default = null
 + callback Function
 ```js
-var jsonark = require('jsonark');
+var jsonscore = require('jsonscore');
 
-jsonark('metadata.json', {
+jsonscore('metadata.json', {
   compile_css: {
     run: false,
     time: 1405213450
