@@ -1,6 +1,6 @@
 {
   "name": "jsonscore",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "extend and update json into a file",
   "main": "index.js",
   "scripts": {

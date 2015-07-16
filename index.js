@@ -26,20 +26,24 @@ JSONScore.prototype = {
 	},
 
 	read: function() {
-		var data = fs.readFileSync(this.filepath, {
-			encoding: this.options.encoding
-		});
+		var data = {};
+		try	{
+			fs.existsSync(this.filepath);
+			data = fs.readFileSync(this.filepath, {
+				encoding: this.options.encoding
+			});
 
-		if (Buffer.isBuffer(data)) {
-			data = data.toString('utf8');
-		};
+			if (Buffer.isBuffer(data)) {
+				data = data.toString('utf8');
+			};
 
-		return _(JSON.parse(data)).chain();
+			data = JSON.parse(data);
+		}catch(e) {}
+
+		return _(data).chain();
 	},
 
 	write: function(data, done) {
-		data = data.value();
-
 		fs.writeFile(this.filepath, JSON.stringify(
 			data, this.options.replacer, this.options.space
 		), function(error) {
