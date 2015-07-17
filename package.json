@@ -1,7 +1,7 @@
 {
   "name": "jsonscore",
-  "version": "0.0.2",
-  "description": "extend and update json into a file",
+  "version": "0.0.3",
+  "description": "manipulate json file using underscore",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
     "url": "git+ssh://git@github.com/xmhscratch/jsonscore.git"
   },
   "keywords": [
-    "json"
+    "json", "jsonfile", "underscore"
   ],
   "author": "xmhscratch",
   "license": "GPL-2.0",
