@@ -7,31 +7,35 @@
 ```js
 var jsonscore = require('jsonscore');
 
-/* alter metadata json file in the root directory
+/* 
+ * alter metadata json file in the root directory
  * addnew and filter two new json object
  */
 jsonscore('metadata.json', {
-  // json file encoding 
-  encoding: 'utf8',
-  // format json with replacer function
-  replacer: null,
-  // number of space between json object
-  space: 4
-}).extend({
-  compile_sass: {
-    run: false,
-    time: 1405213450
-  },
-  minify_js: {
-    run: true,
-    time: 1405213454
-  }
-}).filter(function(task) {
-  return task.run ? false : true;
-}).write(function(error, data) {
-  if(error) console.log(error);
-  else console.log('json saved: ', data);
-});
+    // json file encoding 
+    encoding: 'utf8',
+    // format json with replacer function
+    replacer: null,
+    // number of space between json object
+    space: 4
+})
+  .extend({
+      compile_sass: {
+        run: false,
+        time: 1405213450
+      },
+      minify_js: {
+        run: true,
+        time: 1405213454
+      }
+  })
+  .filter(function(task) {
+      return task.run ? false : true;
+  })
+  .write(function(error, data) {
+      if(error) console.log(error);
+      else console.log('json saved: ', data);
+  });
 ```
 
 ## API
