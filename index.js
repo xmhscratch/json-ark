@@ -47,7 +47,7 @@ JSONScore.prototype = {
 		fs.writeFile(this.filepath, JSON.stringify(
 			data, this.options.replacer, this.options.space
 		), function(error) {
-			return done.call(error, data);
+			return (_.isFunction(done) ? done : _.noop).call(error, data);
 		});
 
 		return data;
@@ -55,6 +55,5 @@ JSONScore.prototype = {
 }
 
 module.exports = function(filepath, options) {
-	var jsonScore = new JSONScore(filepath, options);
-	return jsonScore;
+	return new JSONScore(filepath, options);
 }
