@@ -1,6 +1,6 @@
 {
   "name": "jsonscore",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "manipulate json file using underscore",
   "main": "index.js",
   "scripts": {

@@ -11,7 +11,7 @@ var jsonscore = require('jsonscore');
  * alter metadata json file in the root directory
  * addnew and filter two new json object
  */
-jsonscore('metadata.json', {
+var metadata = jsonscore('metadata.json', {
     // json file encoding 
     encoding: 'utf8',
     // format json with replacer function
@@ -32,10 +32,10 @@ jsonscore('metadata.json', {
   .filter(function(task) {
       return task.run ? false : true;
   })
-  .write(function(error, data) {
-      if(error) console.log(error);
-      else console.log('json saved: ', data);
-  });
+  .write();
+
+console.log(metadata);
+
 ```
 
 ## API
@@ -46,8 +46,7 @@ jsonscore('metadata.json', {
   + replacer Function | Null default = null [JSON format replacer paramter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#The_replacer_parameter)
   + space: Number | Null default = null [JSON format space paramter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#The_space_argument)
 
-**write(done)** write json object back into file
-+ done: Function | Null default = null
+**write()** write json object back into file return json data
 
 ## Authors
   [xmhscratch](http://github.com/xmhscratch)

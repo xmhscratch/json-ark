@@ -29,25 +29,24 @@ JSONScore.prototype = {
 		var data = {};
 		try	{
 			fs.existsSync(this.filepath);
+
 			data = fs.readFileSync(this.filepath, {
 				encoding: this.options.encoding
-			});
-
-			if (Buffer.isBuffer(data)) {
-				data = data.toString('utf8');
-			};
+			}).toString('utf8');
 
 			data = JSON.parse(data);
-		}catch(e) {}
+		}catch(e) {
+			data = {};
+		}
 
 		return _(data).chain();
 	},
 
-	write: function(data, done) {
-		fs.writeFile(this.filepath, JSON.stringify(
+	write: function(data) {
+		fs.writeFileSync(this.filepath, JSON.stringify(
 			data, this.options.replacer, this.options.space
-		), function(error) {
-			return (_.isFunction(done) ? done : _.noop).call(error, data);
+		), {
+			encoding: this.options.encoding
 		});
 
 		return data;
