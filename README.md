@@ -1,4 +1,6 @@
-# jsonscore - update and extend json file
+# JSONscore
+
+Edit json file with underscore.js chain method
 
 ## Installation
 ` $ npm install jsonscore`
