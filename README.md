@@ -40,10 +40,35 @@ console.log(metadata);
 
 ```
 
+**Using `lodash` instead of default `underscore` library**
+```js
+var jsonscore = require('jsonscore');
+var _ = require('lodash');
+
+jsonscore('metadata.json', {
+  engine: _
+}).extend(obj).write();
+```
+
+**Custom mixin methods**
+```js
+var jsonscore = require('jsonscore');
+var _ = require('underscore');
+
+_.mixin({
+  filterWith: [Function]
+});
+
+jsonscore('metadata.json', {
+  engine: _
+}).filterWith(obj).write();
+```
+
 ## API
 **jsonscore(filepath, [, options])** return an underscore chain method
 + filepath String
 + options Object
+  + engine Function | _ default = _
   + encoding String | Null default = 'utf8'
   + replacer Function | Null default = null [JSON format replacer paramter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#The_replacer_parameter)
   + space: Number | Null default = null [JSON format space paramter](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#The_space_argument)

@@ -1,15 +1,14 @@
 var fs = require('fs');
 var path = require('path');
-var _ = require('underscore');
 
 var JSONScore = function(filepath, options) {
+	this.filepath = path.normalize(filepath);
 	options = (options || {});
-	_.defaults(options, this.options);
+
+	this.options.engine.defaults(options, this.options);
 	this.options = options;
 
-	this.filepath = path.normalize(filepath);
-
-	_.mixin({
+	this.options.engine.mixin({
 		write: this.write.bind(this)
 	});
 
@@ -22,7 +21,8 @@ JSONScore.prototype = {
 	options: {
 		encoding: 'utf-8',
 		replacer: null,
-		space: null
+		space: null,
+		engine: require('underscore')
 	},
 
 	read: function() {
@@ -39,7 +39,7 @@ JSONScore.prototype = {
 			data = {};
 		}
 
-		return _(data).chain();
+		return this.options.engine(data).chain();
 	},
 
 	write: function(data) {
