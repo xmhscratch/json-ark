@@ -1,14 +1,18 @@
 {
   "name": "jsonscore",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "edit json file with underscore chain method",
   "main": "index.js",
+  "dependencies": {
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/xmhscratch/jsonscore.git"
+    "url": "https://github.com/xmhscratch/jsonscore.git"
   },
   "keywords": [
     "json",
@@ -20,26 +24,10 @@
   "bugs": {
     "url": "https://github.com/xmhscratch/jsonscore/issues"
   },
-  "homepage": "https://github.com/xmhscratch/jsonscore#readme",
-  "dependencies": {
-    "underscore": "^1.8.3"
-  },
-  "_shasum": "213b56c734ae804c28ae8cd5299552aa25f3427a",
-  "_from": "jsonscore@*",
-  "_npmVersion": "2.10.1",
-  "_nodeVersion": "0.12.4",
-  "_npmUser": {
-    "name": "xmhscratch",
-    "email": "xmhscratch@gmail.com"
-  },
-  "dist": {
-    "shasum": "213b56c734ae804c28ae8cd5299552aa25f3427a",
-    "tarball": "http://registry.npmjs.org/jsonscore/-/jsonscore-0.0.6.tgz"
-  },
+  "homepage": "https://github.com/xmhscratch/jsonscore",
   "maintainers": [
     "xmhscratch <xmhscratch@gmail.com>"
   ],
   "directories": {},
-  "_resolved": "https://registry.npmjs.org/jsonscore/-/jsonscore-0.0.6.tgz",
   "devDependencies": {}
 }
