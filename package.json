@@ -15,9 +15,7 @@
     "jsonfile",
     "underscore"
   ],
-  "author": {
-    "name": "xmhscratch"
-  },
+  "author": "xmhscratch",
   "license": "GPL-2.0",
   "bugs": {
     "url": "https://github.com/xmhscratch/jsonscore/issues"
@@ -26,8 +24,6 @@
   "dependencies": {
     "underscore": "^1.8.3"
   },
-  "gitHead": "70a4d0493ae04ffd923428af9dc73bced6400f22",
-  "_id": "jsonscore@0.0.6",
   "_shasum": "213b56c734ae804c28ae8cd5299552aa25f3427a",
   "_from": "jsonscore@*",
   "_npmVersion": "2.10.1",
@@ -41,12 +37,9 @@
     "tarball": "http://registry.npmjs.org/jsonscore/-/jsonscore-0.0.6.tgz"
   },
   "maintainers": [
-    {
-      "name": "xmhscratch",
-      "email": "xmhscratch@gmail.com"
-    }
+    "xmhscratch <xmhscratch@gmail.com>"
   ],
   "directories": {},
   "_resolved": "https://registry.npmjs.org/jsonscore/-/jsonscore-0.0.6.tgz",
-  "readme": "https://github.com/xmhscratch/jsonscore/blob/master/README.md"
+  "devDependencies": {}
 }
