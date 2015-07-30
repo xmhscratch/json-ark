@@ -28,6 +28,7 @@ JSONScore.prototype = {
 
 	read: function() {
 		var data = this.options.defaultValue || [];
+
 		try	{
 			fs.existsSync(this.filepath);
 
