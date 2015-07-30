@@ -1,6 +1,6 @@
 {
   "name": "jsonscore",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "edit json file with underscore chain method",
   "main": "index.js",
   "scripts": {
@@ -48,5 +48,5 @@
   ],
   "directories": {},
   "_resolved": "https://registry.npmjs.org/jsonscore/-/jsonscore-0.0.6.tgz",
-  "readme": "ERROR: No README data found!"
+  "readme": "https://github.com/xmhscratch/jsonscore/blob/master/README.md"
 }
