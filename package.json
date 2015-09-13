@@ -1,6 +1,6 @@
 {
   "name": "jsonscore",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "edit json file with underscore chain method",
   "main": "index.js",
   "dependencies": {
@@ -29,5 +29,4 @@
     "xmhscratch <xmhscratch@gmail.com>"
   ],
   "directories": {},
-  "devDependencies": {}
 }
